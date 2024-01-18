@@ -1,0 +1,54 @@
+
+"Silk Press":[
+    {"Style ID": [001]
+    "Wash": true
+    "Blowdry": true
+    "Hair treatment": true
+    "Hair Assessment": true
+    "Style Length": "2:00"
+    "Price": "£90"}
+    ]
+    
+    "Braids":[
+    {"Style ID": [002]
+    "Hair Assessment": true
+    "Wash": true
+    "Blowdry": true
+    "Hair treatment": false
+    "Hair length": ""
+    "Style Length": "5:00"
+    "Price": "£50"}
+    ]
+    
+    "Hair Cut":[
+    {"Style ID": [003]
+    "Hair Assessment": false
+    "Wash": true
+    "Blowdry": true
+    "Hair treatment": false
+    "Style Length": "0:45"
+    "Price": "£40"}
+    ]
+    
+    "Weave":[
+    {"Style ID": [004]
+    "Hair Assessment": true
+    "Wash":true
+    "Blowdry": true
+    "Hair treatment": false
+    "Style Length": "2:00"
+    "Price": "£120"}
+    ]
+    
+    
+    
+    "Customer details": [
+    {"Email": "12345@gmail.com"
+    "Phone Number": "0791234567"
+    "First name": "Melissa"
+    "Last name": "Asiamah"
+    "Date of purchase" : "02-01-2024"
+    "Date of Appointment" : "25-01-2024"
+    "Hair type": "Natural" || "Relaxed"}
+    ]
+   
