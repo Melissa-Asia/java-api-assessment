@@ -1,3 +1,5 @@
+
+/*Create Hashmap */
 import java.util.HashSet;
 
 Public class Main{
@@ -10,6 +12,29 @@ Public class Main{
         System.out.println(Hairstyles);
     }
 }
+
+/*Create customer base*/
+/*Defining Class*/
+public class Customer{
+    public static String STATUS = "Non-Member";
+/*Adding attributes */
+    String firstname;
+    String lastname;
+    String status;
+
+public Customer(String firstname, String lastname, String status){
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.status = status;
+}
+   
+System.out.println("Welcome " + firstname + lastname + "You are currently a " +status);
+
+}
+
+
+
+
 
 
 
