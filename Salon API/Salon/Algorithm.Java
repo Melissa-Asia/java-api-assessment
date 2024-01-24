@@ -1,5 +1,6 @@
 
-/*Create a Binary Search algorithm that searchs the data for a hairstyle based on the users input/search */
+/*Create a Binary Search algorithm that searchs the data for a hairstyle based on the users input/search 
+public class algorithm{
 public static n/ String BinarySearch(String [] arr, string target){
  String left = "A";
  String right = arr.length - 1;
@@ -18,4 +19,5 @@ public static n/ String BinarySearch(String [] arr, string target){
  }
  return -1
 }
-    
+}
+*/    

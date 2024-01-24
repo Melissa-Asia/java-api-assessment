@@ -1,45 +1,47 @@
 
-"Hairstyles": 
+{
 "Silk Press":[
-    {"Style ID": [001],
+    {"Style ID": "001",
     "Wash": true,
     "Blowdry": true,
-    "Hair treatment": true,
-    "Hair Assessment": true,
-    "Style Length": "2:00hrs",
-    "Price": "£90",}
-    ]
-    
-    "Braids":[
-    {"Style ID": [002],
+    "treatment": true,
+    "assessment": true,
+    "Style": "2:00hrs",
+    "Price": 90}
+    ],
+
+    "Braids" : [
+    {"Style ID": "002",
     "Hair Assessment": true,
     "Wash": true,
     "Blowdry": true,
     "Hair treatment": false,
     "Hair length": "",
     "Style Length": "5:00hrs",
-    "Price": "£50",}
-    ]
+    "Price": 50}
+    ],
     
-    "Hair Cut":[
-    {"Style ID": [003],
+    "Hair Cut": [
+    {"Style ID": "003",
     "Hair Assessment": false,
     "Wash": true,
     "Blowdry": true,
     "Hair treatment": false,
     "Style Length": "0:45m",
-    "Price": "£40",}
-    ]
+    "Price": 40}
+    ],
     
-    "Weave":[
-    {"Style ID": [004],
+    "Weave" :[
+    {"Style ID": "004",
     "Hair Assessment": true,
     "Wash":true,
     "Blowdry": true,
     "Hair treatment": false,
     "Style Length": "2:00",
-    "Price": "£120",}
+    "Price": 120}
     ]
-    
+}
+
+
 
    

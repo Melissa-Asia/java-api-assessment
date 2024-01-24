@@ -1,5 +1,5 @@
 
-/*Create Hashmap */
+/*Create Hashmap 
 import java.util.HashSet;
 
 Public class Main{
@@ -32,14 +32,14 @@ System.out.println("Welcome " + firstname + lastname + "You are currently a " + 
 
 }
 
-/*Creating instances of the customer class 
+/*Creating instances of the customer class */
 
 public class CustomerBase
 public static void main(String []args){
 Customer Member = new Customer (firstname: "Sarah", lastname: "Jones", status:"Member");
 Customer NonMember = new Customer (firstname: "Sarah", lastname: "Jones", status:"Non-Member");
 }
- */
+ 
 
  public String getDetails (){
     String details = String.format(
