@@ -1,15 +1,10 @@
+package com.cbfacademy.apiassessment.Salon;
 
 import java.util.List;
 import java.util.UUID;
 
-import com.cbfacademy.SalonAPI.Repositories.Repository;
+import com.cbfacademy.apiassessment.Repositories.Repository;
 
-/**
- * The IOURepository interface defines the operations for managing IOUs in the
- * system.
- * It provides methods for retrieving, saving, updating, and deleting IOU
- * records.
- */
 public interface SalonRepository extends Repository<Salon, UUID> {
 
     /**

@@ -1,3 +1,4 @@
+package com.cbfacademy.apiassessment.Salon;
 
 import java.util.List;
 import java.util.UUID;

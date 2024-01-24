@@ -1,4 +1,6 @@
 
+package com.cbfacademy.apiassessment.Repositories;
+
 import java.io.Serializable;
 import java.util.List;
 
