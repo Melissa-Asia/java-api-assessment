@@ -1,9 +1,11 @@
 package com.cbfacademy.apiassessment.core;
 
-import java.io.*;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 /* 
 import java.util.List;
 import java.util.*;
@@ -24,82 +26,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 */
 
-public class SalonDesk {
 
-    public String ID;
-    public String Wash;
-    public String Blowdry;
-    public String treatment;
-    public String Assessment;
-    public String Style;
-    public int Price;
-
-    public SalonDesk(String ID, String Wash, String Blowdry, String treatment, String Assessment, String Style,
-            int price) {
-        this.ID = ID;
-        this.Wash = Wash;
-        this.Blowdry = Blowdry;
-        this.treatment = treatment;
-        this.Assessment = Assessment;
-        this.Style = Style;
-        this.Price = price;
-    }
-
-    public String getID() {
-        return ID;
-    }
-
-    public void setID(String iD) {
-        ID = iD;
-    }
-
-    public String getWash() {
-        return Wash;
-    }
-
-    public void setWash(String wash) {
-        Wash = wash;
-    }
-
-    public String getBlowdry() {
-        return Blowdry;
-    }
-
-    public void setBlowdry(String blowdry) {
-        Blowdry = blowdry;
-    }
-
-    public String getTreatment() {
-        return treatment;
-    }
-
-    public void setTreatment(String treatment) {
-        this.treatment = treatment;
-    }
-
-    public String getAssessment() {
-        return Assessment;
-    }
-
-    public void setAssessment(String assessment) {
-        Assessment = assessment;
-    }
-
-    public String getStyle() {
-        return Style;
-    }
-
-    public void setStyle(String style) {
-        Style = style;
-    }
-
-    public int getPrice() {
-        return Price;
-    }
-
-    public void setPrice(int price) {
-        Price = price;
-    }
 
     private static final SalonDesk[] SALON_DATA() throws FileNotFoundException {
         /*
