@@ -25,7 +25,7 @@
 
 import org.yaml.snakeyaml.events.Event.ID;
 
-public class Hairstyles {
+public class Hairstyle {
     public int ID;
     public Boolean Wash;
     public Boolean Blowdry;
@@ -36,7 +36,7 @@ public class Hairstyles {
 
     public void SalonDesk(int id, Boolean Wash, Boolean Blowdry, Boolean treatment, Boolean Assessment, String Style,
             int price) {
-        this.id = id;
+        this.ID = id;
         this.Wash = Wash;
         this.Blowdry = Blowdry;
         this.treatment = treatment;
