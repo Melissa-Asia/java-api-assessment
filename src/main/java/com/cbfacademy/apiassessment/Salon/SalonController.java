@@ -22,7 +22,7 @@ public class SalonController {
     }
 
     @PostMapping
-    public void createHairstyle(@RequestBody HAirstyle hairstyle) throws IOException {
+    public void createHairstyle(@RequestBody Hairstyle hairstyle) throws IOException {
         List<Hairstyle> hairstyles = salonDesk.getAllHairstyles();
         hairstyles.add(hairstyle);
         salonDesk.saveHairstyles(hairstyles);

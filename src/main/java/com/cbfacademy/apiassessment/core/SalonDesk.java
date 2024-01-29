@@ -38,7 +38,8 @@ public class SalonDesk {
         FileReader fileReader = new FileReader("Hairstyles.json");
         Type type = new TypeToken<List<Hairstyle>>() {
         }.getType();
-        List<Hairstyle> hairstyles = gson.fromJson(filepath, type);
+        List<Hairstyle> hairstyles = gson
+                .fromJson("src\\main\\java\\com\\cbfacademy\\apiassessment\\core\\Data\\Hairstyles.json", T);
         fileReader.close();
         return hairstyles;
     }

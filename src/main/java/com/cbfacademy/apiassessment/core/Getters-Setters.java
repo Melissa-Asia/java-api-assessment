@@ -1,40 +1,6 @@
-/*
- * package com.cbfacademy.apiassessment.core;
- * 
- * import java.util.List;
- * import java.io.FileNotFoundException;
- * import java.io.FileReader;
- * import java.io.IOException;
- * import java.io.JSONFileHandler;
- * 
- * public class JSONFileHandler {
- * public List<String> readFile(String Salon.json);
- * 
- * public void save(Salon salon, String outputFile);
- * }
- * 
- * 
- * public HashMap<String,String>Hairstyles()throws FileNotFoundException{String
- * path="com.cbfacademy.apiassessment.core.Data - Jsonfiles./Salon.json"
- * ;BufferedReader bufferedReader=new BufferedReader(new FileReader(path));
- * 
- * Gson gson=new
- * Gson();HashMap<String,String>json=gson.fromJson(bufferedReader,HashMap.class)
- * ;return json;}}
- */
+package com.cbfacademy.apiassessment.core;
 
-import org.yaml.snakeyaml.events.Event.ID;
-
-public class Hairstyle {
-    public int ID;
-    public Boolean Wash;
-    public Boolean Blowdry;
-    public Boolean treatment;
-    public Boolean Assessment;
-    public String Style;
-    public int Price;
-
-    public void SalonDesk(int id, Boolean Wash, Boolean Blowdry, Boolean treatment, Boolean Assessment, String Style,
+public void Hairstyle_types(int id, Boolean Wash, Boolean Blowdry, Boolean treatment, Boolean Assessment, String Style,
             int price) {
         this.ID = id;
         this.Wash = Wash;
@@ -44,7 +10,7 @@ public class Hairstyle {
         this.Style = Style;
         this.Price = price;
     }
-
+    
     public int getid() {
         return ID;
     }
