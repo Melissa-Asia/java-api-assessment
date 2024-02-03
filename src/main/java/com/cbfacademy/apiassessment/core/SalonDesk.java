@@ -30,6 +30,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 */
 
+//Connects the Json file to Java using Gson. Allows for the Json file to be read and written into
+
 public class SalonDesk {
     private final String filepath = "src\\main\\java\\com\\cbfacademy\\apiassessment\\core\\Data\\Hairstyles.json";
     private final Gson gson = new Gson();
@@ -50,5 +52,5 @@ public class SalonDesk {
         fileWriter.close();
     }
 
-    // Add methods to create, update, and delete hairstyles
+    // Add methods to create, update, and delete hairstyles (CRUD)
 }

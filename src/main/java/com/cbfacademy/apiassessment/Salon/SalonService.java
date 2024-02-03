@@ -3,6 +3,7 @@ package com.cbfacademy.apiassessment.Salon;
 import java.util.List;
 import java.util.UUID;
 
+//Service is for the CRUD 
 public interface SalonService {
 
     /**

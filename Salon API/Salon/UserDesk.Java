@@ -13,11 +13,12 @@ Public class Main{
     }
 }
 
+/*
 /*Create customer base*/
-/*Defining Class*/
+/*Defining Class
 public class Customer{
     public static String STATUS = "Membership";
-/*Adding attributes */
+/*Adding attributes 
     String firstname;
     String lastname;
     String status;
@@ -32,7 +33,7 @@ System.out.println("Welcome " + firstname + lastname + "You are currently a " + 
 
 }
 
-/*Creating instances of the customer class */
+/*Creating instances of the customer class 
 
 public class CustomerBase
 public static void main(String []args){
@@ -48,7 +49,5 @@ Customer NonMember = new Customer (firstname: "Sarah", lastname: "Jones", status
     );
     return details;
  }
-
-
-
+*/
 

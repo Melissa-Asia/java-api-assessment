@@ -5,6 +5,8 @@ import java.util.UUID;
 
 import com.cbfacademy.apiassessment.Repositories.Repository;
 
+// Repository is for searching the file 
+
 public interface SalonRepository extends Repository<Salon, UUID> {
 
     /**
