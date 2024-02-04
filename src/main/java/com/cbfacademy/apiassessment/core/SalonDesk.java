@@ -30,18 +30,19 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 */
 
-//Connects the Json file to Java using Gson. Allows for the Json file to be read and written into
+//Connect the Json file to Java using Gson. Allows for the Json file to be read and written into
 
 public class SalonDesk {
-    private final String filepath = "src\\main\\java\\com\\cbfacademy\\apiassessment\\core\\Data\\Hairstyles.json";
+    private final String filepath = "C:\\Users\\Melissa Asiamah\\Desktop\\Front-end coding\\RESTful API - Java project\\java-api-assessment\\src\\main\\java\\com\\cbfacademy\\apiassessment\\core\\Data";
     private final Gson gson = new Gson();
 
     public List<Hairstyle> getAllHairstyles() throws IOException {
         FileReader fileReader = new FileReader("Hairstyles.json");
         Type type = new TypeToken<List<Hairstyle>>() {
         }.getType();
-        List<Hairstyle> hairstyles = gson
-                .fromJson("src\\main\\java\\com\\cbfacademy\\apiassessment\\core\\Data\\Hairstyles.json", T);
+        List<Hairstyle> hairstyles = gson.fromJson(
+                "C:\\Users\\Melissa Asiamah\\Desktop\\Front-end coding\\RESTful API - Java project\\java-api-assessment\\src\\main\\java\\com\\cbfacademy\\apiassessment\\core\\Data",
+                T);
         fileReader.close();
         return hairstyles;
     }

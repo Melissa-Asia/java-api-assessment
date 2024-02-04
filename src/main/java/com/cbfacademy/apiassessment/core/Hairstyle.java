@@ -98,7 +98,7 @@ public class Hairstyle {
 
     public String getDetails() {
         String details = String.format(
-                "You have Enquired about the %N, This hairstyle will take %s");
+                "You have Enquired about the %N, This hairstyle will take %s and is priced at %P.");
         return details;
     }
 
