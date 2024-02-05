@@ -18,6 +18,21 @@ public class Hairstyle {
     private String style;
     private int price;
 
+    // Includes the constructor
+    public Hairstyle(int id, String name, Boolean wash, Boolean blowdry, Boolean treatment,
+            Boolean assessment, String style,
+            int price) {
+
+        this.id = id;
+        this.name = name;
+        this.wash = wash;
+        this.blowdry = blowdry;
+        this.treatment = treatment;
+        this.assessment = assessment;
+        this.style = style;
+        this.price = price;
+    }
+
     public int getid() {
         return id;
     }
@@ -82,48 +97,11 @@ public class Hairstyle {
         this.price = P;
     }
 
-    // Includes the constructor
-    public void Hairstyle(int id, String name, Boolean wash, Boolean blowdry, Boolean treatment,
-            Boolean assessment, String style,
-            int price) {
-        this.id = id;
-        this.name = name;
-        this.wash = wash;
-        this.blowdry = blowdry;
-        this.treatment = treatment;
-        this.assessment = assessment;
-        this.style = style;
-        this.price = price;
-    }
-
+    // Response when user retrieves their specified data
     public String getDetails() {
         String details = String.format(
                 "You have Enquired about the %N, This hairstyle will take %s and is priced at %P.");
         return details;
     }
 
-}
-
-// Inheritance of the Hairstyle class
-class Braids extends Hairstyle {
-
-    // Adds one field
-    public int BraidhairCost;
-
-    // Inheritance constructor and getters/setters
-    public Braids(int BraidhairCost, int id, String name, Boolean wash, Boolean blowdry, Boolean treatment,
-            Boolean assessment, String style,
-            int price) {       
-
-        public int getBraidhairCost() {
-        return BraidhairCost;
-    }
-
-    public void setBraidhairCost(int BC) {
-        this.BraidhairCost = BC;
-    }
-    
-        // @Override public
-        // Override Assessment,style or price
-    }
 }
