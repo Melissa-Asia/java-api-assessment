@@ -12,11 +12,11 @@ public class Hairstyle {
     public int id;
     public String name;
     public Boolean wash;
-    public Boolean blowdry;
+    private Boolean blowdry;
     public Boolean treatment;
     public Boolean assessment;
-    public String style;
-    public int price;
+    private String style;
+    private int price;
 
     public int getid() {
         return id;
@@ -83,7 +83,7 @@ public class Hairstyle {
     }
 
     // Includes the constructor
-    public void Hairstyle_types(int id, String name, Boolean wash, Boolean blowdry, Boolean treatment,
+    public void Hairstyle(int id, String name, Boolean wash, Boolean blowdry, Boolean treatment,
             Boolean assessment, String style,
             int price) {
         this.id = id;
@@ -104,15 +104,25 @@ public class Hairstyle {
 
 }
 
-// Evidence of inheritance
-class ShortHairstyle extends Hairstyle {
-    public int level;
-    public Boolean shapeup;
-    public Boolean fullShave;
+// Inheritance of the Hairstyle class
+class Braids extends Hairstyle {
 
-    // Inheritance getters and setters
-    public ShortHairstyle(int level, Boolean shapeup, Boolean fullShave) {
+    // Adds one field
+    public int BraidhairCost;
 
+    // Inheritance constructor and getters/setters
+    public Braids(int BraidhairCost, int id, String name, Boolean wash, Boolean blowdry, Boolean treatment,
+            Boolean assessment, String style,
+            int price) {       
+
+        public int getBraidhairCost() {
+        return BraidhairCost;
+    }
+
+    public void setBraidhairCost(int BC) {
+        this.BraidhairCost = BC;
+    }
+    
         // @Override public
         // Override Assessment,style or price
     }

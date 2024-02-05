@@ -1,0 +1,44 @@
+
+{
+"Hairstyles" :[
+    {"id": 1, 
+    "Name": "Silk Press",
+    "Wash": true,
+    "Blowdry": true,
+    "Treatment": true,
+    "Assessment": true,
+    "Style": "2:00hrs",
+    "price": 90},
+
+    {"id": 2, 
+    "Name": "Braids",
+    "Wash": true,
+    "Blowdry": true,
+    "Treatment": false,
+    "Assessment": true,
+    "Style": "5:00hrs",
+    "price": 50},
+    
+    {"id":3, 
+    "Name": "Hair Cut",
+    "Wash": true,
+    "Blowdry": true,
+    "Treatment": false,
+    "Assessment": false,
+    "Style": "0:45m",
+    "price": 40},
+    
+    {"id": 4, 
+    "name":"Weave",
+    "Wash":true,
+    "Blowdry": true,
+    "Treatment": false,
+    "Assessment": true,
+    "Style": "2:00",
+    "price": 120}
+]
+}
+
+
+
+   
