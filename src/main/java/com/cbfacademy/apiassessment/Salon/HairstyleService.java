@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.cbfacademy.apiassessment.core.Hairstyle;
 
-//Service is for the CRUD 
+//Service is for the CRUD and does the logic
 public interface HairstyleService {
 
     /**

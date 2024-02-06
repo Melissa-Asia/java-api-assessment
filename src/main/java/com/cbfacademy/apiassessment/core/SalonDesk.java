@@ -40,7 +40,7 @@ public class SalonDesk {
         FileReader fileReader = new FileReader("Hairstyles.json");
         Type type = new TypeToken<List<Hairstyle>>() {
         }.getType();
-        List<Hairstyle> hairstyles = gson.fromJson(filepath, T);
+        List<Hairstyle> hairstyles = gson.fromJson(filepath, );
         fileReader.close();
         return hairstyles;
     }
