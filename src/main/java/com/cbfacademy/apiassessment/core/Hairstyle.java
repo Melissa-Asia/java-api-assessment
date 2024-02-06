@@ -97,6 +97,11 @@ public class Hairstyle {
         this.price = P;
     }
 
+    @Override
+    public String toString() {
+        return "You have enquired about the [name " + name + "at £, + price]";
+    }
+
     // Response when user retrieves their specified data
     public String getDetails() {
         String details = String.format(
