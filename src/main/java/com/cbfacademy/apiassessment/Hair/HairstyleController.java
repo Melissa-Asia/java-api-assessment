@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Hairtyles")
+@RequestMapping("/Hairtyle")
 public class HairstyleController {
 
 	private final HairstyleService hairstyleService = new HairstyleService();
@@ -23,40 +23,40 @@ public class HairstyleController {
 	 * }
 	 */
 
+	// Retrieve all
 	@GetMapping
-	public List<Hairstyle> getAllHairstyles() throws IOException {
+	public Hairstyle getAllHairstyles() throws IOException {
 		return hairstyleService.getAllHairstyles();
 	}
 
+	// Find by Json key
 	@GetMapping
-	public List<Hairstyle> findHairstyleByKey(String key, Object value) {
+	public Hairstyle findHairstyleByKey(String key, Object value) {
 		return hairstyleService.findHairstyleByKey(key, value);
 	}
 
-	// CRUD Methods for retrieving, creating, updating and deleting
-
 	// Retrieve by name
 	@GetMapping("Hairstyle/{name}")
-	public String Hairstyle(@RequestParam("name") String name) {
-		return String.format("You have selected", name);
+	public String Hairstyle(@RequestParam("name") Hairstyle hairstyles) {
+		return String.format("You have selected", hairstyles);
 	}
 
 	// Create a new Hairstyle into data
 	@PostMapping("Hairstyle")
-	public Hairstyle createHairstyle(@RequestBody Hairstyle hairstyle) {
-		return hairstyleService.createHairstyle(hairstyle);
+	public Hairstyle createHairstyles(@RequestBody Hairstyle hairstyles) {
+		return hairstyleService.createHairstyles(hairstyles);
 	}
 
 	// Save/Update current Hairstyle data
 	@PutMapping("Hairstyle")
-	public Hairstyle saveHairstyle(List<Hairstyle> hairstyle) {
-		return hairstyleService.saveHairstyle(hairstyle);
+	public Hairstyle saveHairstyles(@RequestBody Hairstyle hairstyles) {
+		return hairstyleService.saveHairstyles(hairstyles);
 	}
 
 	// Delete a current Hairstyle in data
 	@DeleteMapping("Hairstyle/{name}")
-	public Hairstyle deleteHairstyle(@RequestParam("name") String name) {
-		return hairstyleService.deleteHairstyle(hairstyle);
+	public Hairstyle deleteHairstylse(@RequestParam("name") Hairstyle hairstyles) {
+		return hairstyleService.deleteHairstyles(hairstyles);
 	}
 	/*
 	 * {
@@ -64,5 +64,4 @@ public class HairstyleController {
 	 * }
 	 */
 
-	// Add endpoints for updating, deleting etc hairstyles
 }

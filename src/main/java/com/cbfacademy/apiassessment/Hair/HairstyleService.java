@@ -9,44 +9,40 @@ public class HairstyleService {
     private final HairstyleRepository hairstyleRepository = new HairstyleRepository();
 
     // Retrieve a list of all Hairstyles.
-    public List<Hairstyle> getAllHairstyle() {
+    public List<Hairstyle> getAllHairstyles() {
         return hairstyleRepository.getAllHairstyles();
     }
 
     // Retrieve a Hairstyle by its name.
-    public List<Hairstyle> getAllHairstyle(String name) {
+    public List<Hairstyle> getAllHairstyles(Hairstyle hairstyles) {
         return hairstyleRepository.getAllHairstyles();
     }
 
-    // Create a new Hairstyle.
-    public List<Hairstyle> saveAllHairstyle(String name) {
-        return hairstyleRepository.save(hairstyles);
+    // Save a new Hairstyle.
+    public void saveAllHairstyles(Hairstyle hairstyles) {
+        hairstyleRepository.saveAllHairstyles(hairstyles);
     }
 
     /**
      * Update an existing Hairstyle by its name.
-     *
+     * 
      * @param id               The name of the Hairstyle to update.
      * @param updatedHairstyle The updated Hairstyle object.
      * @return The updated Hairstyle, or null if the name is not found.
      */
-    Hairstyle updateHairstyle(String name, Hairstyle updatedHairHairstyle);
+    public List<Hairstyle> updateHairstyles(Hairstyle updatedhairstyles) {
+        return hairstyleRepository.updateHairstyles();
+    }
 
-    /**
-     * Delete a Hairstyle by its name.
-     *
-     * @param name The name of the Hairstyle to delete.
-     */
-    void deleteHairstyle(String name);
+    // Delete a Hairstyle by its name.
+    public List<Hairstyle> deleteHairstyles(Hairstyle hairstyles) {
+        return hairstyleRepository.deleteHairstyles();
+    }
 
-    /**
-     * Save a new Hairstyle.
-     *
-     * @param name The Hairstyle object to save.
-     * @return The saved Hairstyle.
-     */
-    Hairstyle saveHairstyle(String name);
+    // Save a new Hairstyle.
+    Hairstyle saveHairstyles(Hairstyle hairstyles);
 
+    // Find a Hairstyle by a Json key
     public Hairstyle findHairstyleByKey(String key, Object value) {
         return hairstyleRepository.findHairstyleByKey(key, value);
     }
