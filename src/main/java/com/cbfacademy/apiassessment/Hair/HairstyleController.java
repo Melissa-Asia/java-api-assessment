@@ -1,11 +1,9 @@
-package com.cbfacademy.apiassessment.Salon;
+package com.cbfacademy.apiassessment.Hair;
 
 //import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.cbfacademy.apiassessment.core.Hairstyle;
 
 import com.cbfacademy.apiassessment.core.SalonDesk;
 
@@ -24,7 +22,7 @@ public class HairstyleController {
 
 	@GetMapping
 	public List<Hairstyle> getAllHairstyles() throws IOException {
-		return hairstyleService.getAllHairstyles();
+		return hairstyleService.getAllHairstyles(Hair, );
 	}
 	/*
 	 * @PostMapping

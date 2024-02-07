@@ -1,4 +1,4 @@
-package com.cbfacademy.apiassessment.Salon;
+package com.cbfacademy.apiassessment.Hair;
 
 import java.util.List;
 import java.util.UUID;
@@ -7,7 +7,7 @@ import com.cbfacademy.apiassessment.Repositories.Repository;
 
 // Repository is for searching the file 
 
-public interface SalonRepository extends Repository<Salon, UUID> {
+public interface HairstyleRepository extends Repository<Salon, UUID> {
 
     /**
      * Searches for IOUs where the borrower's name matches the provided string.

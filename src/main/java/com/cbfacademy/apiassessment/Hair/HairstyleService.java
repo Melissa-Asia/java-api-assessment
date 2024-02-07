@@ -1,11 +1,10 @@
-package com.cbfacademy.apiassessment.Salon;
+package com.cbfacademy.apiassessment.Hair;
 
 import java.util.List;
 //import java.util.UUID;
 
-import com.cbfacademy.apiassessment.core.Hairstyle;
-
 //Service is for the CRUD and does the logic
+
 public interface HairstyleService {
 
     /**

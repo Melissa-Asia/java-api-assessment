@@ -1,4 +1,4 @@
-package com.cbfacademy.apiassessment.core;
+package com.cbfacademy.apiassessment.Hair;
 
 // Inheritance of the Hairstyle class
 public class Braids extends Hairstyle {
