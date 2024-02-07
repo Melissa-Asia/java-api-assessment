@@ -1,4 +1,3 @@
-
 package com.cbfacademy.apiassessment.Hair;
 /* 
 import java.util.List;
@@ -19,29 +18,29 @@ public class Hairstyle {
     private int price;
 
     // Includes the constructor
-    public Hairstyle(int id, String name, Boolean wash, Boolean blowdry, Boolean treatment,
-            Boolean assessment, String style,
-            int price) {
+    public Hairstyle(int ID, String Name, Boolean Wash, Boolean Blowdry, Boolean Treatment,
+            Boolean Assessment, String Style,
+            int Price) {
 
-        this.id = id;
-        this.name = name;
-        this.wash = wash;
-        this.blowdry = blowdry;
-        this.treatment = treatment;
-        this.assessment = assessment;
-        this.style = style;
-        this.price = price;
+        this.id = ID;
+        this.name = Name;
+        this.wash = Wash;
+        this.blowdry = Blowdry;
+        this.treatment = Treatment;
+        this.assessment = Assessment;
+        this.style = Style;
+        this.price = Price;
     }
 
-    public int getid() {
+    public int getID() {
         return id;
     }
 
-    public void setid(int ID) {
+    public void setID(int ID) {
         this.id = ID;
     }
 
-    public String getname() {
+    public String getName() {
         return name;
     }
 
@@ -49,7 +48,7 @@ public class Hairstyle {
         this.name = N;
     }
 
-    public Boolean getwash() {
+    public Boolean isWash() {
         return wash;
     }
 
@@ -57,39 +56,39 @@ public class Hairstyle {
         this.wash = W;
     }
 
-    public Boolean getblowdry() {
+    public Boolean isBlowdry() {
         return blowdry;
     }
 
-    public void setblowdry(Boolean B) {
+    public void setBlowdry(Boolean B) {
         this.blowdry = B;
     }
 
-    public Boolean gettreatment() {
+    public Boolean isTreatment() {
         return treatment;
     }
 
-    public void settreatment(Boolean T) {
+    public void setTreatment(Boolean T) {
         this.treatment = T;
     }
 
-    public Boolean getassessment() {
+    public Boolean isAssessment() {
         return assessment;
     }
 
-    public void setassessment(Boolean A) {
+    public void setAssessment(Boolean A) {
         this.assessment = A;
     }
 
-    public String getstyle() {
+    public String getStyle() {
         return style;
     }
 
-    public void setstyle(String S) {
+    public void setStyle(String S) {
         this.style = S;
     }
 
-    public int getprice() {
+    public int getPrice() {
         return price;
     }
 

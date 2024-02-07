@@ -5,30 +5,23 @@ import java.util.List;
 
 //Service is for the CRUD and does the logic
 
-public interface HairstyleService {
+public class HairstyleService {
+    private final HairstyleRepository hairstyleRepository = new HairstyleRepository();
 
-    /**
-     * Retrieve a list of all Hairstyles.
-     *
-     * @return A list of all Hairstles.
-     */
-    List<Hairstyle> getAllHairstyle();
+    // Retrieve a list of all Hairstyles.
+    public List<Hairstyle> getAllHairstyle() {
+        return hairstyleRepository.getAllHairstyles();
+    }
 
-    /**
-     * Retrieve a Hairstyle by its name.
-     *
-     * @param name The ID of the IOU to retrieve.
-     * @return The Hairstyle with the specified name, or null if not found.
-     */
-    Hairstyle getHairstyle(String name);
+    // Retrieve a Hairstyle by its name.
+    public List<Hairstyle> getAllHairstyle(String name) {
+        return hairstyleRepository.getAllHairstyles();
+    }
 
-    /**
-     * Create a new Hairstyle.
-     *
-     * @param name The Hairstyle object to create.
-     * @return The created Hairstyle.
-     */
-    Hairstyle createHairstyle(String name);
+    // Create a new Hairstyle.
+    public List<Hairstyle> saveAllHairstyle(String name) {
+        return hairstyleRepository.save(hairstyles);
+    }
 
     /**
      * Update an existing Hairstyle by its name.
@@ -46,4 +39,15 @@ public interface HairstyleService {
      */
     void deleteHairstyle(String name);
 
+    /**
+     * Save a new Hairstyle.
+     *
+     * @param name The Hairstyle object to save.
+     * @return The saved Hairstyle.
+     */
+    Hairstyle saveHairstyle(String name);
+
+    public Hairstyle findHairstyleByKey(String key, Object value) {
+        return hairstyleRepository.findHairstyleByKey(key, value);
+    }
 }
