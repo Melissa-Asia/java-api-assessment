@@ -11,7 +11,7 @@ public class Hairstyle {
     public int id;
     public String name;
     public Boolean wash;
-    private Boolean blowdry;
+    public Boolean blowdry;
     public Boolean treatment;
     public Boolean assessment;
     private String style;

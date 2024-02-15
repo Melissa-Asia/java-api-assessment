@@ -48,14 +48,14 @@ public class HairstyleController {
 	}
 
 	// Save/Update current Hairstyle data
-	@PutMapping("Hairstyle")
+	@PutMapping("Hairstyle/{name}")
 	public Hairstyle saveHairstyles(@RequestBody Hairstyle hairstyles) {
 		return hairstyleService.saveHairstyles(hairstyles);
 	}
 
 	// Delete a current Hairstyle in data
 	@DeleteMapping("Hairstyle/{name}")
-	public Hairstyle deleteHairstylse(@RequestParam("name") Hairstyle hairstyles) {
+	public Hairstyle deleteHairstyles(@RequestParam("name") Hairstyle hairstyles) {
 		return hairstyleService.deleteHairstyles(hairstyles);
 	}
 	/*

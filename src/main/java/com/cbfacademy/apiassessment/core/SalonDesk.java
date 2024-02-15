@@ -1,15 +1,16 @@
-package com.cbfacademy.apiassessment.core;
-
-import com.cbfacademy.apiassessment.Hairstyles.Hairstyle;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.List;
-
 /*
+ * package com.cbfacademy.apiassessment.core;
+ * 
+ * import com.cbfacademy.apiassessment.Hairstyles.Hairstyle;
+ * import com.google.gson.Gson;
+ * import com.google.gson.reflect.TypeToken;
+ * import java.io.FileReader;
+ * import java.io.FileWriter;
+ * import java.io.IOException;
+ * import java.lang.reflect.Type;
+ * import java.util.List;
+ * 
+ * 
  * import java.io.FileNotFoundException;
  * import java.io.FileInputStream;
  * import com.google.gson.stream.JsonReader;

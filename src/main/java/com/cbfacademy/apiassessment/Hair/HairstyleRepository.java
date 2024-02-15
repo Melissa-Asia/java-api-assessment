@@ -36,8 +36,26 @@ public class HairstyleRepository {
         }
     }
 
-    //
-    public void saveAllHairstyles(List<Hairstyle> hairstyles) {
+    // To save
+    public void saveHairstyles(List<Hairstyle> hairstyles) {
+        try (FileWriter writer = new FileWriter(filePath)) {
+            gson.toJson(hairstyles, writer);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // To delete
+    public void deleteHairstyles(List<Hairstyle> hairstyles) {
+        try (FileWriter writer = new FileWriter(filePath)) {
+            gson.toJson(hairstyles, writer);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // To create
+    public void createHairstyles(List<Hairstyle> hairstyles) {
         try (FileWriter writer = new FileWriter(filePath)) {
             gson.toJson(hairstyles, writer);
         } catch (IOException e) {

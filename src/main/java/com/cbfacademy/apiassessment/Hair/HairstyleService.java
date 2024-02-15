@@ -18,11 +18,6 @@ public class HairstyleService {
         return hairstyleRepository.getAllHairstyles();
     }
 
-    // Save a new Hairstyle.
-    public void saveAllHairstyles(Hairstyle hairstyles) {
-        hairstyleRepository.saveAllHairstyles(hairstyles);
-    }
-
     /**
      * Update an existing Hairstyle by its name.
      * 
@@ -30,17 +25,25 @@ public class HairstyleService {
      * @param updatedHairstyle The updated Hairstyle object.
      * @return The updated Hairstyle, or null if the name is not found.
      */
-    public List<Hairstyle> updateHairstyles(Hairstyle updatedhairstyles) {
-        return hairstyleRepository.updateHairstyles();
+    /*
+     * public Hairstyle updateHairstyles(Hairstyle updatedhairstyles) {
+     * return hairstyleRepository.updateHairstyles();
+     * }
+     */
+
+    public Hairstyle createHairstyles(Hairstyle updatedhairstyles) {
+        return hairstyleRepository.createHairstyles();
     }
 
     // Delete a Hairstyle by its name.
-    public List<Hairstyle> deleteHairstyles(Hairstyle hairstyles) {
+    public Hairstyle deleteHairstyles(Hairstyle hairstyles) {
         return hairstyleRepository.deleteHairstyles();
     }
 
     // Save a new Hairstyle.
-    Hairstyle saveHairstyles(Hairstyle hairstyles);
+    public Hairstyle saveHairstyles(Hairstyle hairstyles) {
+        return hairstyleRepository.saveHairstyles();
+    }
 
     // Find a Hairstyle by a Json key
     public Hairstyle findHairstyleByKey(String key, Object value) {
