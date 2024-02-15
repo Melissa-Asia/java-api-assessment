@@ -31,7 +31,7 @@ public class HairstyleService {
      * }
      */
 
-    public Hairstyle createHairstyles(Hairstyle updatedhairstyles) {
+    public List<Hairstyle> createHairstyles(Hairstyle updatedhairstyles) {
         return hairstyleRepository.createHairstyles();
     }
 

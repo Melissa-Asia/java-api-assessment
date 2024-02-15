@@ -60,7 +60,7 @@ class HairstyleTests {
 			Boolean blowdry = false;
 			Boolean treatment = true;
 			Boolean assessment = false;
-			String style = "TestStyle";
+			String style = "3:00hrs";
 			int price = 50;
 
 			Hairstyle hairstyle = new Hairstyle(id, name, wash, blowdry, treatment, assessment, style, price);
