@@ -1,3 +1,61 @@
+# Hairstyle Management System
+
+This project is a simple management system for hairstyles. It allows users to retrieve and update hairstyle data stored in a JSON file.
+
+## Overview
+
+The system consists of the following components:
+- **Controller:** Handles incoming HTTP requests and delegates them to the service layer.
+- **Service:** Contains business logic for handling hairstyle-related operations.
+- **Repository:** Interface for data access operations.
+- **Model (Hairstyle):** Represents a hairstyle object.
+
+## Components
+
+### Controller
+
+The `HairstyleController` class handles incoming HTTP requests related to hairstyles. It contains methods for retrieving and updating hairstyle data.
+
+### Service
+
+The `HairstyleService` class contains business logic for handling hairstyle-related operations. It includes methods for retrieving hairstyles with treatment, and updating treatment status.
+
+### Repository
+
+The `HairstyleRepository` class is responsible for data access operations. It includes methods for reading, updating, and saving hairstyle data to a JSON file.
+
+### Model
+
+The `Hairstyle` class represents a hairstyle object with attributes such as ID, name, treatment status, etc.
+
+## Getting Started
+
+To run the project locally, follow these steps:
+1. Clone the repository to your local machine.
+2. Ensure you have Java installed on your system.
+3. Open the project in your preferred IDE.
+4. Build and run the project.
+
+## Usage
+
+Once the project is running, you can use an HTTP client (e.g., Postman) to interact with the API endpoints provided by the controller. Below are some example requests:
+
+- Retrieve hairstyles with treatment: `GET /hairstyles/with-treatment`
+- Update treatment status: `PUT /hairstyles/{id}/treatment`
+  Request Body: `{"treatment": false}`
+
+## Dependencies
+
+The project uses the following dependencies:
+- Gson: for JSON serialization and deserialization.
+- (Add any other dependencies used in the project)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+------------
+
 # **Java Hair Salon API**
 
 ## **Introduction**
