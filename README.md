@@ -105,11 +105,11 @@ To run the project locally, follow these steps:
 Once the project is running, you can use an HTTP client (e.g., Postman) to interact with the API endpoints provided by the controller. Below are some example requests:
 
 Endpoints
-GET /api/hairstyles: Get all hairstyles
-GET /api/hairstyles/{name}: Get a hairstyle by name
-POST /api/hairstyles: Add a new hairstyle
-PUT /api/hairstyles/{name}: Update a hairstyle by name
-DELETE /api/hairstyles/{name}: Delete a hairstyle by name
+- GET /api/hairstyles: Get all hairstyles
+- GET /api/hairstyles/{name}: Get a hairstyle by name
+- POST /api/hairstyles: Add a new hairstyle
+- PUT /api/hairstyles/{name}: Update a hairstyle by name
+- DELETE /api/hairstyles/{name}: Delete a hairstyle by name
 
 ## Dependencies
 
