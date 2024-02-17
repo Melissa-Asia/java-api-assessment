@@ -1,7 +1,16 @@
 package com.cbfacademy.apiassessment.Hair;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-//import java.util.UUID;
 
 //Service is for the CRUD and does the logic
 
@@ -36,13 +45,13 @@ public class HairstyleService {
     }
 
     // Delete a Hairstyle by its name.
-    public Hairstyle deleteHairstyles(Hairstyle hairstyles) {
-        return hairstyleRepository.deleteHairstyles();
+    public Hairstyle deleteHairstyle(Hairstyle hairstyles) {
+        return hairstyleRepository.deleteHairstyle();
     }
 
-    // Save a new Hairstyle.
+    // Update a new Hairstyle.
     public Hairstyle saveHairstyles(Hairstyle hairstyles) {
-        return hairstyleRepository.saveHairstyles();
+        return hairstyleRepository.updateHairstyle();
     }
 
     // Find a Hairstyle by a Json key
