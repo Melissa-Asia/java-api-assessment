@@ -25,19 +25,19 @@ public class HairstyleRepository {
         try (FileReader reader = new FileReader(filePath)) {
             Type listType = new TypeToken<List<Hairstyle>>() {
             }.getType();
-            List<Hairstyle> hairstyles = gson.fromJson(reader, listType);
+            this.hairstyles = gson.fromJson(reader, listType);
             // binary search algorithm - hairstyles must be sorted by id
             // h1 and h2 represent a first obect and a second. Collections.sort
             Collections.sort(hairstyles, (h1, h2) -> h1.getID() - h2.getID());
             return hairstyles;
         } catch (IOException e) {
-            e.printStackTrace();
-            return null;
+            this.harstyles = new ArrayList<>();
         }
     }
 
     // To save
     public void saveHairstyles(List<Hairstyle> hairstyles) {
+        Gson gson = new Gson();
         try (FileWriter writer = new FileWriter(filePath)) {
             gson.toJson(hairstyles, writer);
         } catch (IOException e) {
