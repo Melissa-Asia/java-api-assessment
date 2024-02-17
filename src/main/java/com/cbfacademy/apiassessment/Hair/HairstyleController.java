@@ -14,18 +14,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/Hairtyle")
 public class HairstyleController {
+	private final HairstyleService hairstyleService
 
-	private final HairstyleService hairstyleService = new HairstyleService();
-
-	/*
-	 * public HairstyleController(HairstyleService hairstyleService) {
-	 * this.hairstyleService = hairstyleService;
-	 * }
-	 */
-
+	 public HairstyleController() throws IOException {
+	 this.hairstyleService = new HairstyleService("Hairstyle.json");
+	  }
+	 
 	// Retrieve all
 	@GetMapping
-	public Hairstyle getAllHairstyles() throws IOException {
+	public List<Hairstyle> getAllHairstyles() throws IOException {
 		return hairstyleService.getAllHairstyles();
 	}
 
@@ -37,31 +34,38 @@ public class HairstyleController {
 
 	// Retrieve by name
 	@GetMapping("Hairstyle/{name}")
-	public String Hairstyle(@RequestParam("name") Hairstyle hairstyles) {
-		return String.format("You have selected", hairstyles);
+        public String getHairstyleByName(@PathVariable String name) {
+        Hairstyle hairstyle = hairstyleService.getHairstyleByName(name);
+        return hairstyle != null ? hairstyle.toString() : "Hairstyle not found";
 	}
 
 	// Create a new Hairstyle into data
 	@PostMapping("Hairstyle")
-	public Hairstyle createHairstyles(@RequestBody Hairstyle hairstyles) {
+	public String createHairstyles(@RequestBody Hairstyle hairstyles) {
+		try{
 		return hairstyleService.createHairstyles(hairstyles);
+		} catch (IOException e){
+		return "File not found";
+		}
 	}
 
-	// Save/Update current Hairstyle data
+	// Update current Hairstyle data
 	@PutMapping("Hairstyle/{name}")
-	public Hairstyle saveHairstyles(@RequestBody Hairstyle hairstyles) {
-		return hairstyleService.saveHairstyles(hairstyles);
+	public String UpdateHairstyle(@PathVariable String name, @RequestBody) {
+		try{
+		return hairstyleService.updateHairstyles(name, newHairstyle);
+		} catch (IOException e) {
+		return "File not found";
+		}
 	}
 
 	// Delete a current Hairstyle in data
 	@DeleteMapping("Hairstyle/{name}")
-	public Hairstyle deleteHairstyles(@RequestParam("name") Hairstyle hairstyles) {
+	public String deleteHairstyle(@RequestParam("name") Hairstyle hairstyles) {
+		try{
 		return hairstyleService.deleteHairstyles(hairstyles);
+		} catch (IOException e) {
+		return "File not Found";
+		}	
 	}
-	/*
-	 * {
-	 * return String.format("You have deleted");
-	 * }
-	 */
-
 }
