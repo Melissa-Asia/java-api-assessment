@@ -111,11 +111,14 @@ Endpoints
 - PUT /api/hairstyles/{name}: Update a hairstyle by name
 - DELETE /api/hairstyles/{name}: Delete a hairstyle by name
 
+## Error Handling
+- If the requested hairstyle does not exist, the API will return a 404 error with the message "Hairstyle not found".
+- If the requested operation results in a file not found error, the API will return a 500 error with the message "File not found".
+
 ## Dependencies
 
 The project uses the following dependencies:
 - Gson: for JSON serialization and deserialization.
-- (Add any other dependencies used in the project)
 
 ## License
 
