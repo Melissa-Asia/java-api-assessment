@@ -23,12 +23,12 @@ public class HairstyleService {
     }
 
     // Retrieve a list of all Hairstyles.
-    public List<Hairstyle> getAllHairstyles() {
+    public Hairstyle getAllHairstyles() throws IOException {
         return hairstyleRepository.getAllHairstyles();
     }
 
     // Retrieve a Hairstyle by its name.
-    public Hairstyle getHairstyleByName(String name) {
+    public Hairstyle getHairstyleByName(String name) throws IOException {
         return hairstyleRepository.getHairstyleByName(name);
     }
 
@@ -51,24 +51,29 @@ public class HairstyleService {
     }
 
     // Update a new Hairstyle
+    /**
+     * @param name
+     * @param newHairstyle
+     * @return
+     * @throws IOException
+     */
     public String updateHairstyle(String name, Hairstyle newHairstyle) throws IOException {
-        Hairstyle existingHairstyle = hairstyleRepository.getHairstyleByName (name);
-        if (existingHairstyle !=null) {
+        Hairstyle existingHairstyle = hairstyleRepository.getHairstyleByName(name);
+        if (existingHairstyle != null) {
             hairstyleRepository.updateHairstyle(name, newHairstyle);
             return "Hairstyle updated";
-        }else{
+        } else {
             return "Hairstyle not found";
         }
-        }
-
-    if(!name.equals(newHairstyle.getName())&&hairstyles.contains(newHairstyle))
-
-    {
-        return "Hairstyle already available";
     }
-}
 
     // Find a Hairstyle by a Json key
+    /**
+     * @param key
+     * @param value
+     * @return
+     */
     public Hairstyle findHairstyleByKey(String key, Object value) {
         return hairstyleRepository.findHairstyleByKey(key, value);
     }
+}

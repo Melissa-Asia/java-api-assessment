@@ -20,7 +20,7 @@ public class HairstyleController {
 
 	// Retrieve all
 	@GetMapping
-	public List<Hairstyle> getAllHairstyles() throws IOException {
+	public Hairstyle getAllHairstyles() throws IOException {
 		return hairstyleService.getAllHairstyles();
 	}
 
@@ -32,7 +32,7 @@ public class HairstyleController {
 
 	// Retrieve by name
 	@GetMapping("Hairstyle/{name}")
-	public String getHairstyleByName(@PathVariable String name) {
+	public String getHairstyleByName(@PathVariable String name) throws IOException {
 		Hairstyle hairstyle = hairstyleService.getHairstyleByName(name);
 		return hairstyle != null ? hairstyle.toString() : "Hairstyle not found";
 	}
@@ -49,19 +49,19 @@ public class HairstyleController {
 
 	// Update current Hairstyle data
 	@PutMapping("Hairstyle/{name}")
-	public String UpdateHairstyle(@PathVariable String name, @RequestBody) {
-		try{
-		return hairstyleService.updateHairstyle(name, newHairstyle);
+	public String UpdateHairstyle(@PathVariable String name, @RequestBody Hairstyle newHairstyle) {
+		try {
+			return hairstyleService.updateHairstyle(name, newHairstyle);
 		} catch (IOException e) {
-		return "File not found";
+			return "File not found";
 		}
 	}
 
 	// Delete a current Hairstyle in data
 	@DeleteMapping("Hairstyle/{name}")
-	public String deleteHairstyle(@RequestParam("name") Hairstyle hairstyles) {
+	public String deleteHairstyle(@PathVariable String name) {
 		try {
-			return hairstyleService.deleteHairstyle(hairstyles);
+			return hairstyleService.deleteHairstyle(name);
 		} catch (IOException e) {
 			return "File not Found";
 		}
