@@ -22,6 +22,10 @@ public class HairstyleService {
         this.hairstyleRepository = hairstyleRepository;
     }
 
+    public HairstyleService() {
+        //TODO Auto-generated constructor stub
+    }
+
     // Retrieve a list of all Hairstyles.
     public Hairstyle getAllHairstyles() throws IOException {
         return hairstyleRepository.getAllHairstyles();

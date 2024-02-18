@@ -2,12 +2,12 @@ package com.cbfacademy.apiassessment.Hair;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+//import org.springframework.boot.SpringApplication;
+//import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //Acesses the endpoints to gt application - very little logic
 import java.io.IOException;
-import java.util.List;
+//import java.util.List;
 
 @RestController
 @RequestMapping("/Hairtyle")
@@ -15,7 +15,7 @@ public class HairstyleController {
 	private final HairstyleService hairstyleService;
 
 	public HairstyleController(HairstyleService hairstyleService) throws IOException {
-		this.hairstyleService = new HairstyleService();
+		this.hairstyleService = hairstyleService;
 	}
 
 	// Retrieve all
