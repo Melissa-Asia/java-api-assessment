@@ -3,7 +3,7 @@ package com.cbfacademy.apiassessment.Repositories;
 
 import java.io.IOException;
 
-import com.cbfacademy.apiassessment.Hair.Hairstyle;
+import com.cbfacademy.apiassessment.core.Hair.Hairstyle;
 
 // import java.io.Serializable;
 // import java.util.List;

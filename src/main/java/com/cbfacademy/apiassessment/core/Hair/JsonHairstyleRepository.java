@@ -1,4 +1,4 @@
-package com.cbfacademy.apiassessment.Hair;
+package com.cbfacademy.apiassessment.core.Hair;
 
 import java.util.List;
 import com.google.gson.Gson;

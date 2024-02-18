@@ -1,4 +1,4 @@
-package com.cbfacademy.apiassessment.Hair;
+package com.cbfacademy.apiassessment.core.Hair;
 
 import com.cbfacademy.apiassessment.Repositories.HairstyleRepository;
 import com.google.gson.Gson;
@@ -23,7 +23,7 @@ public class HairstyleService {
     }
 
     public HairstyleService() {
-        //TODO Auto-generated constructor stub
+        // TODO Auto-generated constructor stub
     }
 
     // Retrieve a list of all Hairstyles.

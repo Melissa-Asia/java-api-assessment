@@ -1,4 +1,4 @@
-package com.cbfacademy.apiassessment.Hair;
+package com.cbfacademy.apiassessment.core.Hair;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.*;
