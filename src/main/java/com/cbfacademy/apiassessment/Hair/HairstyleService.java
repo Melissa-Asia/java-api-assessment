@@ -17,8 +17,8 @@ import java.util.List;
 
 public class HairstyleService {
     private final HairstyleRepository hairstyleRepository;
-    
-    public HairstyleService(HairstyleRepository hairstyleRepository){
+
+    public HairstyleService(HairstyleRepository hairstyleRepository) {
         this.hairstyleRepository = hairstyleRepository;
     }
 
@@ -31,34 +31,25 @@ public class HairstyleService {
     public Hairstyle getHairstyleByName(String name) {
         return hairstyleRepository.getHairstyleByName(name);
     }
-    
-    /
 
-    / 
+    // To create
 
-    ublic 
-
-    tring createHairstyle(Hairstyle hairstyle) throws IOException {
+    public String createHairstyle(Hairstyle hairstyle) throws IOException {
         hairstyleRepository.createHairstyle(hairstyle);
         return "Hairstyle added";
-        if (hairstyleRepository.contains(hairstyle)) {
-            return "Hairstyle already available";
-        }
-
     }
 
-    
-    / Delete a Hairstyle by its name
-     public String deleteHairstyle(String name) throws IOException {
-        Hairstyle existingHairst yle = hairstyleRepository.getHairstyleByName (name);
-        if (existingHairstyle !=null) {
+    // Delete a Hairstyle by its name
+    public String deleteHairstyle(String name) throws IOException {
+        Hairstyle existingHairstyle = hairstyleRepository.getHairstyleByName(name);
+        if (existingHairstyle != null) {
             hairstyleRepository.deleteHairstyle(name);
-             r eturn "Hairstyle deleted";
-        }else{
-         
+            return "Hairstyle deleted";
+        } else {
+            return "Hairstyle not found";
+        }
     }
 
-    
     // Update a new Hairstyle
     public String updateHairstyle(String name, Hairstyle newHairstyle) throws IOException {
         Hairstyle existingHairstyle = hairstyleRepository.getHairstyleByName (name);
@@ -66,15 +57,18 @@ public class HairstyleService {
             hairstyleRepository.updateHairstyle(name, newHairstyle);
             return "Hairstyle updated";
         }else{
-            r
+            return "Hairstyle not found";
+        }
+        }
 
-    e
-        
+    if(!name.equals(newHairstyle.getName())&&hairstyles.contains(newHairstyle))
+
+    {
+        return "Hairstyle already available";
     }
+}
 
-
-   return "Hairstyle already available"
-
-pu
-
-
+    // Find a Hairstyle by a Json key
+    public Hairstyle findHairstyleByKey(String key, Object value) {
+        return hairstyleRepository.findHairstyleByKey(key, value);
+    }
