@@ -38,20 +38,62 @@ public class HairstyleService {
      * public Hairstyle updateHairstyles(Hairstyle updatedhairstyles) {
      * return hairstyleRepository.updateHairstyles();
      * }
-     */
-
+     
     public List<Hairstyle> createHairstyles(Hairstyle updatedhairstyles) {
         return hairstyleRepository.createHairstyles();
     }
+*/
 
-    // Delete a Hairstyle by its name.
-    public Hairstyle deleteHairstyle(Hairstyle hairstyles) {
-        return hairstyleRepository.deleteHairstyle();
+    // To create
+    public String addHairstyle(Hairstyle hairstyle) throws IOException {
+        if (hairstyles.contains(hairstyle)) {
+            return "Hairstyle already available";
+        }
+
+        hairstyles.add(hairstyle);
+        Collections.sort(hairstyles);
+        saveHairstyles();
+        return "Hairstyle added";
     }
 
+    // Delete a Hairstyle by its name.
+    /*
+    public Hairstyle deleteHairstyle(Hairstyle hairstyles) {
+        return hairstyleRepository.deleteHairstyle();
+    }*/
+
+     public String deleteHairstyle(String name) throws IOException {
+        int index = binarySearch(name);
+        if (index == -1) {
+            return "Hairstyle not found";
+        }
+
+        hairstyles.remove(index);
+        saveHairstyles();
+        return "Hairstyle deleted";
+    }
+
+
     // Update a new Hairstyle.
+    /*
     public Hairstyle saveHairstyles(Hairstyle hairstyles) {
         return hairstyleRepository.updateHairstyle();
+    }*/
+    
+    public String updateHairstyle(String name, Hairstyle newHairstyle) throws IOException {
+        int index = binarySearch(name);
+        if (index == -1) {
+            return "Hairstyle not found";
+        }
+
+        if (!name.equals(newHairstyle.getName()) && hairstyles.contains(newHairstyle)) {
+            return "Hairstyle already available";
+        }
+
+        hairstyles.set(index, newHairstyle);
+        Collections.sort(hairstyles);
+        saveHairstyles();
+        return "Hairstyle updated";
     }
 
     // Find a Hairstyle by a Json key
