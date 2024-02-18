@@ -27,13 +27,6 @@ public class HairstyleService {
         return hairstyleRepository.getAllHairstyles();
     }
 
-    /**
-     * Update an existing Hairstyle by its name.
-     * 
-     * @param id               The name of the Hairstyle to update.
-     * @param updatedHairstyle The updated Hairstyle object.
-     * @return The updated Hairstyle, or null if the name is not found.
-     */
     /*
      * public Hairstyle updateHairstyles(Hairstyle updatedhairstyles) {
      * return hairstyleRepository.updateHairstyles();
@@ -45,7 +38,7 @@ public class HairstyleService {
 */
 
     // To create
-    public String addHairstyle(Hairstyle hairstyle) throws IOException {
+    public String createHairstyle(Hairstyle hairstyle) throws IOException {
         if (hairstyles.contains(hairstyle)) {
             return "Hairstyle already available";
         }
