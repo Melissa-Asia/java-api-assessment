@@ -18,4 +18,10 @@ public interface HairstyleRepository {
     void updatedHairstyle(Hairstyle hairstyle) throws IOException;
 
     void deleteHairstyle(Hairstyle hairstyle) throws IOException;
+
+    void deleteHairstyle(String name);
+
+    void updateHairstyle(String name, Hairstyle newHairstyle);
+
+    Hairstyle findHairstyleByKey(String key, Object value);
 }

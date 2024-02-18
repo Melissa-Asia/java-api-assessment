@@ -1,17 +1,17 @@
 package com.cbfacademy.apiassessment.core.Hair;
 
 import com.cbfacademy.apiassessment.Repositories.HairstyleRepository;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+//import com.google.gson.Gson;
+//import com.google.gson.reflect.TypeToken;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
+//import java.io.FileNotFoundException;
+//import java.io.FileReader;
+//import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+//import java.lang.reflect.Type;
+//import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.List;
 
 //Service is for the CRUD and does the logic
 
@@ -23,7 +23,7 @@ public class HairstyleService {
     }
 
     public HairstyleService() {
-        // TODO Auto-generated constructor stub
+        this.hairstyleRepository = null;
     }
 
     // Retrieve a list of all Hairstyles.
