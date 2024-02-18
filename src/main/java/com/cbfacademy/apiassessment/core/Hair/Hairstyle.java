@@ -108,4 +108,19 @@ public class Hairstyle {
         return details;
     }
 
+    public boolean isEmpty() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+    }
+
+    public Hairstyle get(int mid) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'get'");
+    }
+
+    public int size() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'size'");
+    }
+
 }

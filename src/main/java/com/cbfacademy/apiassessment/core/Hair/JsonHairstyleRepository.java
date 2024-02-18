@@ -1,6 +1,8 @@
 package com.cbfacademy.apiassessment.core.Hair;
 
 import java.util.List;
+
+import com.cbfacademy.apiassessment.Repositories.HairstyleRepository;
 import com.google.gson.Gson;
 //import com.google.gson.JsonArray;
 //import com.google.gson.JsonElement;
@@ -21,7 +23,7 @@ public class JsonHairstyleRepository implements HairstyleRepository {
     private final String filePath = "Hairstyles.json";
     private final Gson gson = new Gson();
 
-    public List<Hairstyle> getAllHairstyles() {
+    public Hairstyle getAllHairstyles() {
         try (FileReader reader = new FileReader(filePath)) {
             Type listType = new TypeToken<List<Hairstyle>>() {
             }.getType();
@@ -76,7 +78,7 @@ public class JsonHairstyleRepository implements HairstyleRepository {
     // Algorithm to search by different keys from the Json File
     // Using the switch to be able to handle the different keys
     public Hairstyle findHairstyleByKey(String key, Object value) {
-        List<Hairstyle> hairstyles = getAllHairstyles();
+        Hairstyle hairstyles = getAllHairstyles();
         if (hairstyles == null || hairstyles.isEmpty()) {
             return null;
         }
@@ -116,12 +118,47 @@ public class JsonHairstyleRepository implements HairstyleRepository {
                     }
                     break;
                 // Add cases for other keys (Blowdry, Treatment, Assessment, Style, price)
-                // similarly
                 default:
                     return null; // Invalid key
             }
         }
         return null; // Hairstyle not found
+    }
+
+    @Override
+    public void createHairstyle(Hairstyle hairstyle) throws IOException {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void deleteHairstyle(Hairstyle hairstyle) throws IOException {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void deleteHairstyle(String name) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public Hairstyle getHairstyleByName(String name) throws IOException {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public void updateHairstyle(String name, Hairstyle newHairstyle) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void updatedHairstyle(Hairstyle hairstyle) throws IOException {
+        // TODO Auto-generated method stub
+
     }
 }
 
