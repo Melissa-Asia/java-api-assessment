@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.cbfacademy.apiassessment.Hair.HairstyleRepository;
-
 //Acesses the endpoints to gt application - very little logic
 import java.io.IOException;
 import java.util.List;
@@ -14,12 +12,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/Hairtyle")
 public class HairstyleController {
-	private final HairstyleService hairstyleService
+	private final HairstyleService hairstyleService;
 
-	 public HairstyleController() throws IOException {
-	 this.hairstyleService = new HairstyleService("Hairstyle.json");
-	  }
-	 
+	public HairstyleController(HairstyleService hairstyleService) throws IOException {
+		this.hairstyleService = new HairstyleService();
+	}
+
 	// Retrieve all
 	@GetMapping
 	public List<Hairstyle> getAllHairstyles() throws IOException {
@@ -34,18 +32,18 @@ public class HairstyleController {
 
 	// Retrieve by name
 	@GetMapping("Hairstyle/{name}")
-        public String getHairstyleByName(@PathVariable String name) {
-        Hairstyle hairstyle = hairstyleService.getHairstyleByName(name);
-        return hairstyle != null ? hairstyle.toString() : "Hairstyle not found";
+	public String getHairstyleByName(@PathVariable String name) {
+		Hairstyle hairstyle = hairstyleService.getHairstyleByName(name);
+		return hairstyle != null ? hairstyle.toString() : "Hairstyle not found";
 	}
 
 	// Create a new Hairstyle into data
 	@PostMapping("Hairstyle")
-	public String createHairstyles(@RequestBody Hairstyle hairstyles) {
-		try{
-		return hairstyleService.createHairstyles(hairstyles);
-		} catch (IOException e){
-		return "File not found";
+	public String createHairstyle(@RequestBody Hairstyle hairstyles) {
+		try {
+			return hairstyleService.createHairstyle(hairstyles);
+		} catch (IOException e) {
+			return "File not found";
 		}
 	}
 
@@ -53,7 +51,7 @@ public class HairstyleController {
 	@PutMapping("Hairstyle/{name}")
 	public String UpdateHairstyle(@PathVariable String name, @RequestBody) {
 		try{
-		return hairstyleService.updateHairstyles(name, newHairstyle);
+		return hairstyleService.updateHairstyle(name, newHairstyle);
 		} catch (IOException e) {
 		return "File not found";
 		}
@@ -62,10 +60,10 @@ public class HairstyleController {
 	// Delete a current Hairstyle in data
 	@DeleteMapping("Hairstyle/{name}")
 	public String deleteHairstyle(@RequestParam("name") Hairstyle hairstyles) {
-		try{
-		return hairstyleService.deleteHairstyles(hairstyles);
+		try {
+			return hairstyleService.deleteHairstyle(hairstyles);
 		} catch (IOException e) {
-		return "File not Found";
-		}	
+			return "File not Found";
+		}
 	}
 }

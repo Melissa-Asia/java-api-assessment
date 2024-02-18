@@ -1,5 +1,6 @@
 package com.cbfacademy.apiassessment.Hair;
 
+import com.cbfacademy.apiassessment.Repositories.HairstyleRepository;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -15,7 +16,11 @@ import java.util.List;
 //Service is for the CRUD and does the logic
 
 public class HairstyleService {
-    private final HairstyleRepository hairstyleRepository = new HairstyleRepository();
+    private final HairstyleRepository hairstyleRepository;
+    
+    public HairstyleService(HairstyleRepository hairstyleRepository){
+        this.hairstyleRepository = hairstyleRepository;
+    }
 
     // Retrieve a list of all Hairstyles.
     public List<Hairstyle> getAllHairstyles() {
@@ -23,74 +28,53 @@ public class HairstyleService {
     }
 
     // Retrieve a Hairstyle by its name.
-    public List<Hairstyle> getAllHairstyles(Hairstyle hairstyles) {
-        return hairstyleRepository.getAllHairstyles();
+    public Hairstyle getHairstyleByName(String name) {
+        return hairstyleRepository.getHairstyleByName(name);
     }
-
-    /*
-     * public Hairstyle updateHairstyles(Hairstyle updatedhairstyles) {
-     * return hairstyleRepository.updateHairstyles();
-     * }
-     
-    public List<Hairstyle> createHairstyles(Hairstyle updatedhairstyles) {
-        return hairstyleRepository.createHairstyles();
-    }
-*/
-
-    // To create
-    public String createHairstyle(Hairstyle hairstyle) throws IOException {
-        if (hairstyles.contains(hairstyle)) {
-            return "Hairstyle already available";
-        }
-
-        hairstyles.add(hairstyle);
-        Collections.sort(hairstyles);
-        saveHairstyles();
-        return "Hairstyle added";
-    }
-
-    // Delete a Hairstyle by its name.
-    /*
-    public Hairstyle deleteHairstyle(Hairstyle hairstyles) {
-        return hairstyleRepository.deleteHairstyle();
-    }*/
-
-     public String deleteHairstyle(String name) throws IOException {
-        int index = binarySearch(name);
-        if (index == -1) {
-            return "Hairstyle not found";
-        }
-
-        hairstyles.remove(index);
-        saveHairstyles();
-        return "Hairstyle deleted";
-    }
-
-
-    // Update a new Hairstyle.
-    /*
-    public Hairstyle saveHairstyles(Hairstyle hairstyles) {
-        return hairstyleRepository.updateHairstyle();
-    }*/
     
-    public String updateHairstyle(String name, Hairstyle newHairstyle) throws IOException {
-        int index = binarySearch(name);
-        if (index == -1) {
-            return "Hairstyle not found";
-        }
+    /
 
-        if (!name.equals(newHairstyle.getName()) && hairstyles.contains(newHairstyle)) {
+    / 
+
+    ublic 
+
+    tring createHairstyle(Hairstyle hairstyle) throws IOException {
+        hairstyleRepository.createHairstyle(hairstyle);
+        return "Hairstyle added";
+        if (hairstyleRepository.contains(hairstyle)) {
             return "Hairstyle already available";
         }
 
-        hairstyles.set(index, newHairstyle);
-        Collections.sort(hairstyles);
-        saveHairstyles();
-        return "Hairstyle updated";
     }
 
-    // Find a Hairstyle by a Json key
-    public Hairstyle findHairstyleByKey(String key, Object value) {
-        return hairstyleRepository.findHairstyleByKey(key, value);
+    
+    / Delete a Hairstyle by its name
+     public String deleteHairstyle(String name) throws IOException {
+        Hairstyle existingHairst yle = hairstyleRepository.getHairstyleByName (name);
+        if (existingHairstyle !=null) {
+            hairstyleRepository.deleteHairstyle(name);
+             r eturn "Hairstyle deleted";
+        }else{
+         
     }
-}
+
+    
+    // Update a new Hairstyle
+    public String updateHairstyle(String name, Hairstyle newHairstyle) throws IOException {
+        Hairstyle existingHairstyle = hairstyleRepository.getHairstyleByName (name);
+        if (existingHairstyle !=null) {
+            hairstyleRepository.updateHairstyle(name, newHairstyle);
+            return "Hairstyle updated";
+        }else{
+            r
+
+    e
+        
+    }
+
+
+   return "Hairstyle already available"
+
+pu
+
+

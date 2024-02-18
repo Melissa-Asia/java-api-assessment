@@ -17,7 +17,7 @@ import java.lang.reflect.Type;
 
 // Repository is for searching the file 
 
-public class HairstyleRepository {
+public class JsonHairstyleRepository implements HairstyleRepository {
     private final String filePath = "Hairstyles.json";
     private final Gson gson = new Gson();
 
@@ -25,18 +25,19 @@ public class HairstyleRepository {
         try (FileReader reader = new FileReader(filePath)) {
             Type listType = new TypeToken<List<Hairstyle>>() {
             }.getType();
-            this.hairstyles = gson.fromJson(reader, listType);
+            List<Hairstyle> hairstyles = gson.fromJson(reader, listType);
             // binary search algorithm - hairstyles must be sorted by id
             // h1 and h2 represent a first obect and a second. Collections.sort
             Collections.sort(hairstyles, (h1, h2) -> h1.getID() - h2.getID());
             return hairstyles;
         } catch (IOException e) {
-            this.harstyles = new ArrayList<>();
+            e.printStackTrace();
+            return null;
         }
     }
 
     // To save
-    public void saveHairstyles(List<Hairstyle> hairstyles) {
+    public void saveHairstyle(List<Hairstyle> hairstyles) {
         Gson gson = new Gson();
         try (FileWriter writer = new FileWriter(filePath)) {
             gson.toJson(hairstyles, writer);
@@ -46,7 +47,7 @@ public class HairstyleRepository {
     }
 
     // To delete
-    public void deleteHairstyles(List<Hairstyle> hairstyles) {
+    public void deleteHairstyle(List<Hairstyle> hairstyles) {
         try (FileWriter writer = new FileWriter(filePath)) {
             gson.toJson(hairstyles, writer);
         } catch (IOException e) {
@@ -55,7 +56,16 @@ public class HairstyleRepository {
     }
 
     // To create
-    public void createHairstyles(List<Hairstyle> hairstyles) {
+    public void createHairstyle(List<Hairstyle> hairstyles) {
+        try (FileWriter writer = new FileWriter(filePath)) {
+            gson.toJson(hairstyles, writer);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // To update
+    public void updateHairstyle(List<Hairstyle> hairstyles) {
         try (FileWriter writer = new FileWriter(filePath)) {
             gson.toJson(hairstyles, writer);
         } catch (IOException e) {
